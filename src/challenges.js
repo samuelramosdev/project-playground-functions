@@ -29,7 +29,9 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  return Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse) ? 'os gatos trombam e o rato foge' :
+    Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse) ? 'cat2' : 'cat1';
 }
 
 // Desafio 8
