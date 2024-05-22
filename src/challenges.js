@@ -61,9 +61,14 @@ function decode(encodedWord) {
 }
 
 // Desafio 10
-function techList() {
+function techList(techsToLearn, name) {
+  const orderedTechs = techsToLearn.sort();
+  const techsObj = orderedTechs.map(tech => ({ tech, name }));
+  return techsObj;
 }
 
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+  "Lucas"));
 // Desafio 11
 function generatePhoneNumber() {
 }
