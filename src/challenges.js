@@ -55,10 +55,10 @@ function encode(word) {
   return word.split('').map(char => vowelMap[char] || char).join('');
 }
 
-function decode() {
+function decode(encodedWord) {
+  const numberMap = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  return encodedWord.split('').map(char => numberMap[char] || char).join('');
 }
-
-console.log(encode('samuel'));
 
 // Desafio 10
 function techList() {
