@@ -22,7 +22,10 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
+  const highest = Math.max(...numbers);
+  const counter = numbers.filter(number => number === highest).length;
+  return counter;
 }
 
 // Desafio 7
