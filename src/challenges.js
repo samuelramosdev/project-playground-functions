@@ -50,10 +50,15 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(word) {
+  const vowelMap = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  return word.split('').map(char => vowelMap[char] || char).join('');
 }
+
 function decode() {
 }
+
+console.log(encode('samuel'));
 
 // Desafio 10
 function techList() {
