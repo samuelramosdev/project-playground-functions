@@ -1,5 +1,5 @@
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1, bool2) {
+  return bool1 && bool2 ? true : false
 }
 // Desafio 2
 function calcArea() {
