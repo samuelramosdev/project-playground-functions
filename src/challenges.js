@@ -71,7 +71,12 @@ const generatePhoneNumber = (arrayOfNumbers) => {
 };
 
 // Desafio 12
-function triangleCheck() {
+const triangleCheck = (lineA, lineB, lineC) => {
+  const check1 = lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
+  const check2 = lineB < lineA + lineC && lineB > Math.abs(lineA - lineC);
+  const check3 = lineC < lineA + lineB && lineC > Math.abs(lineA - lineB);
+
+  return check1 && check2 && check3;
 }
 
 // Desafio 13
