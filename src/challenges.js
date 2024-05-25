@@ -43,10 +43,13 @@ const fizzBuzz = (numbers) => {
 // Desafio 9
 const encode = (word) => {
   const vowelMap = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+
   return word.split('').map(char => vowelMap[char] || char).join('');
 }
+
 const decode = (encodedWord) => {
   const numberMap = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+
   return encodedWord.split('').map(char => numberMap[char] || char).join('');
 }
 
@@ -54,6 +57,7 @@ const decode = (encodedWord) => {
 const techList = (techsToLearn, name) => {
   const orderedTechs = techsToLearn.sort();
   const techsObj = orderedTechs.map(tech => ({ tech, name }));
+
   return techsObj;
 }
 
@@ -80,7 +84,13 @@ const triangleCheck = (lineA, lineB, lineC) => {
 }
 
 // Desafio 13
-function hydrate() {
+const hydrate = (intake) => {
+  const quantities = intake.match(/\d+/g).map(Number);
+  const sumOfQuantities = quantities.reduce((acc, curr) => acc + curr, 0);
+
+  return sumOfQuantities > 1 ?
+    `${sumOfQuantities} copos de água` :
+    `${sumOfQuantities} copo de água`;
 }
 
 module.exports = {
